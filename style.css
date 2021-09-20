@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+/* navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    background-color: #f76c6c;
+    color: white;
+}
+nav h1 {
+    font-size: 2rem;
+}
+ul.menu {
+    padding: 0;
+    list-style: none;
+}
+ul.menu>li>a {
+    display: inline-block;
+    padding: .25rem;
+    text-decoration: none;
+    color: white;
+}
+/* header */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    background-image: url("https://picsum.photos/id/1020/600/400");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    filter: drop-shadow(2px 2px 6px #000);
+}
+/* section */
+section {
+    padding: .5rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* products */
+section.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background-color: #f76c6c;
+}
+section.products>article {
+    padding: .5rem;
+    border: 1px solid white;
+}
+section.products>article:first-child {
+    grid-column: span 2;
+}
