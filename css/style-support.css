@@ -1,0 +1,59 @@
+body {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width: 991px) {
+    body {
+        display: initial;
+    }
+}
+
+/* grid example */
+header, main, aside, footer {
+    padding: 2rem;
+}
+header {
+    grid-column: span 4;
+    background-color: blue;
+}
+main {
+    min-height: calc(100vh - (4rem * 3));
+    grid-column: span 3;
+    background-color: pink;
+}
+@media screen and (max-width: 991px) {
+    main {
+        min-height: calc(50vh - (4rem * 3));
+    }
+    /* main, aside {
+        grid-column: span 4;
+    }*/
+}
+aside {
+    background-color: green;
+}
+footer {
+    grid-column: span 4;
+    background-color: gray;
+}
+
+/* flex example */
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.box {
+    margin-right: .5rem;
+    padding: .5rem;
+    border: 2px solid #000;
+    color: #333;
+    background-color: #ccc;
+    /* font-size: 2rem; */
+}
+@media screen and (max-width: 991px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
